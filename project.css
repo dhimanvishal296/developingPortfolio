@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500&display=swap');
+
+* {
+  background-color: black;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+html {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.section {
+  max-width: 120rem;
+  margin: 0 auto;
+  margin-top: 9rem;
+}
+
+.section-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2px 20px;
+}
+
+.nav-links {
+
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.nav-links a {
+  list-style: none;
+  text-decoration: none;
+  color: goldenrod;
+}
+
+.hero-heading {
+
+  color: white;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
+  letter-spacing: .25rem;
+
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.container {
+  text-align: center;
+  margin-top: 9rem;
+  color: white;
+}
+
+.hero-para {
+  letter-spacing: .25rem;
+}
+
+.container .btn {
+  padding: 3px 5px;
+  color: white;
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .nav-links a:hover {
+  color: white;
+  transition: all 0.5s linear;
+}
+
+.navbar #logo {
+  border-radius: 5px;
+}
+
+.grid {
+  display: grid;
+  gap: 2.2rem;
+  
+  
+}
+.grid-two-column{
+    grid-template-columns: repeat(2,1fr);
+    
+}
+
+.grid-three-column{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+.heading {
+  color: goldenrod;
+  font-size: 20px;
+  letter-spacing: .20rem;
+  margin: 2.3rem;
+
+}
+
+
+.work-container {
+  
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 1.2rem; 
+}
+
+
+
+.work-images img {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 7px;
+  position: relative;
+  overflow: hidden;
+}
+.about-img img{
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .5rem auto;
+
+}
+.about-data{
+   color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    margin-left: 3rem;
+    /* max-width: 40rem; */
+    
+}
+.work-images{
+  transition: transform 0.7s;
+}
+.work-images:hover{
+   transform: scale(1.1);
+}
+
+@media (max-width:480px){
+ .about-section .grid-two-column{
+  grid-template-columns: 1fr;
+ }
+  .work-section .grid-three-column{
+    grid-template-columns: 1fr;
+  }
+
+
+}

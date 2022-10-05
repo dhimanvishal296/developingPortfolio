@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated no.</title>
+    <style>
+        h2{
+            font-size: 3rem;
+        }
+        .animatedNumber{
+            margin-top: 9rem;
+            background-color: aqua;
+           
+            transition: all 0.7s linear;
+            text-align: center;
+        }
+    .grid{
+        display: grid;
+        gap: 4rem;
+    }
+    .grid-four-column{
+        grid-template-columns: repeat(4,1fr);
+    }
+    @media (max-width:490px){
+        .animatedNumber .grid-four-column {
+        grid-template-columns: 1fr;
+    }
+
+    }
+    .heading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+       font-size: 3rem;
+    }
+
+    </style>
+</head>
+
+<body>
+    <h1 class="heading"> Referesh the page to see the animation agian </h1>
+
+    <section class="animatedNumber">
+        <div class="container grid grid-four-column">
+
+            <div>
+                <h2 class="counter-numbers" data-number="2000">0+</h2>
+                <p>projects completed</p>
+
+            </div>
+
+            <div>
+                <h2 class="counter-numbers" data-number="6000">0+</h2>
+                <p>Happy client</p>
+
+            </div>
+
+            <div>
+                <h2 class="counter-numbers" data-number="5000">0+</h2>
+                <p> cup of coffee</p>
+
+            </div>
+
+            <div>
+                <h2 class="counter-numbers" data-number="3000">0+</h2>
+                <p> recomendations</p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <script>
+     
+const counterNum = document.querySelectorAll(".counter-numbers");
+const speed = 200;
+
+ counterNum.forEach((curElem) => {
+    const updateNum = () =>{
+        const targetNum = parseInt(curElem.dataset.number);
+        // console.log(targetNum);
+
+        const initialNum = parseInt(curElem.innerText);
+        // console.log(initialNum);  
+
+        const incrementNum = Math.trunc(targetNum/speed);
+        
+
+        if(initialNum < targetNum){
+            curElem.innerText = initialNum + incrementNum +"+";
+            setTimeout(updateNum,20);
+        }
+
+
+    }
+
+    updateNum();
+});
+
+    </script>
+
+</body>
+
+</html>
